@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 13</title>
+
+	<!-- Enunciado: Un ciclista parte de una ciudad A a las HH horas, MM minutos y SS segundos. 
+        El tiempo de viaje hasta llegar a otra ciudad B es de T segundos. 
+        Escribir un algoritmo que determine la hora de llegada a la ciudad B.-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	
+    <script type="text/javascript">
+		alert('Bienvenido a mi programa!!!');
+        document.write('<h3>TIEMPO QUE TARDA UN CICLISTA EN LLEGAR DE UN PUNTO A UN PUNTO B</h2>');
+        
+        var horaSalida = parseInt(prompt('Introduzca la hora de salida del punto A. HH: '));
+        document.write('<h3>Hora salida: '+horaSalida+'</h2>');
+
+		var minSalida = parseInt(prompt("Introduzca la hora de salida del punto A. MM: "));
+        document.write('<h3>Minutos salida: '+minSalida+'</h2>');
+
+        var segSalida = parseInt(prompt("Introduzca la hora de salida del punto A. SS: "));
+        document.write('<h3>Segundos salida: '+segSalida+'</h2>');
+
+        var segLlegada = parseInt(prompt("Introduzca el tiempo que tardo en llegar en SS: "));
+        document.write('<h3>Segundos totales llegada: '+segLlegada+'</h2>');
+				
+		var t1 = horaSalida * 3600;
+		var t2 = minSalida * 60;
+		var tiempoEnSeg = (t1 + t2 + segSalida) + segLlegada;
+		
+		var minutos = tiempoEnSeg / 60;
+		var segundos = tiempoEnSeg % 60;
+		var horas = 0;
+		var minutos2 = 0;
+		var cont = minutos;
+		
+		if (minutos > 60) {
+			while (cont > 60) {
+				horas = minutos / 60;
+				minutos2 = minutos % 60;
+				cont = horas;
+			}
+            var enteroHH = horas.toFixed();  
+            var enteroMM = minutos2.toFixed();  
+            var enteroSS = segundos.toFixed();  
+            document.write('<h1>La hora de llegada es a las ' + enteroHH 
+                + ': ' + enteroMM + ', ' + enteroSS + '</h1>');
+		} else {
+            var enteroT1 = t1.toFixed();  
+            var enteroMM = minutos.toFixed();  
+            var enteroSS = segundos.toFixed(); 
+            document.write('<h1>La hora de llegada es a las ' + enteroT1 
+                + ': ' + enteroMM + ', ' + enteroSS + '</h1>');
+		}
+
+	</script>
+</body>
+</html>

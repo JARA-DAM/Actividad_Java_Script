@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--  Escribir un algoritmo para calcular la nota final de un estudiante, considerando que: 
+        por cada respuesta correcta 5 puntos, por una incorrecta -1 y por respuestas en 
+        blanco 0. Imprime el resultado obtenido por el estudiante.-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+       
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h3>CALCULAR LA NOTA FINAL DE UN ESTUDIANTE</h2>');
+        
+        var correctas = parseInt(prompt('Introduzca la cantidad de respuestas correctas: '));
+        document.write('<h3>Correctas: ' + correctas + '</h3>');
+	
+        var incorrectas = parseInt(prompt('Introduzca la cantidad de respuestas incorrectas: '));
+        document.write('<h3>Incorrectas: '+incorrectas+'</h3>');
+
+	var notaFinal = (correctas * 5) + (incorrectas * (-1));
+        document.write('<h2>Nota Final: '+notaFinal+'</h2>');
+        
+	</script>
+</body>
+</html>

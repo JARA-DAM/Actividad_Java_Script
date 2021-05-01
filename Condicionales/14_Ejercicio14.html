@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--El director de una escuela está organizando un viaje de estudios, y requiere 
+        determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de 
+        viajes por el servicio. La forma de cobrar es la siguiente: 
+        si son 100 alumnos o más, el costo por cada alumno es de 65 euros; 
+        de 50 a 99 alumnos, el costo es de 70 euros, de 30 a 49, de 95 euros, 
+        y si son menos de 30, el costo de la renta del autobús es de 4000 euros, 
+        sin importar el número de alumnos. 
+        Realice un algoritmo que permita determinar el pago a la compañía de autobuses 
+        y lo que debe pagar cada alumno por el viaje.
+	-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+        alert('Bienvenido a mi programa!!!');
+        const precio1 = 65;
+	    const precio2 = 70;
+	    const precio3 = 95;
+	    const precioUnico = 4000;
+        document.write('<h2>CALCULO DEL PRECIO DEL VIAJE DE ESTUDIOS DE UNA ESCUELA.</h2>');
+        var precioTotal = 0;
+        var precioAlumno = 0;
+        var alumnos = parseInt(prompt('¿Cuantos alumnos van al viaje?:'));  
+        if (alumnos >= 100) {
+            precioTotal = precio1 * alumnos;
+            document.write('<h3>Cada alumno tiene que pagar ' + precio1 + '€' +'</h3>');
+            document.write('<h3>El precio total del viaje es de ' + precioTotal + '€' +'</h3>');
+        } else if (alumnos >= 50 && alumnos <= 99) {
+            precioTotal = precio2 * alumnos; 
+            document.write('<h3>Cada alumno tiene que pagar ' + precio2 + '€' +'</h3>');
+            document.write('<h3>El precio total del viaje es de ' + precioTotal + '€' +'</h3>');        
+        } else if (alumnos >= 30 && alumnos <= 49) {
+            precioTotal = precio3 * alumnos; 
+            document.write('<h3>Cada alumno tiene que pagar ' + precio3 + '€' +'</h3>');
+            document.write('<h3>El precio total del viaje es de ' + precioTotal + '€' +'</h3>'); 
+        } else if (alumnos >= 1 && alumnos <= 29){
+            precioAlumno = precioUnico / alumnos; 
+            document.write('<h3>Cada alumno tiene que pagar ' + precioAlumno + '€' +'</h3>');
+            document.write('<h3>El precio total del viaje es de ' + precioUnico + '€' +'</h3>');        
+        } else if (alumnos <= 0 || alumnos != ''){
+            document.write('<h3>No hay alumnos ' + '</h3>');
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--Algoritmo que muestre la tabla de multiplicar de los
+        números 1,2,3,4 y 5
+	-->
+
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+        alert('Bienvenido a mi programa!!!');
+
+        document.write('<h2>TABLAS DE MULTIPLICAR DEL 1 AL 5.</h2>');
+
+        var multi = 1;
+        
+        for (var i = 1; i <= 5; i++) {
+            document.write('<h3>Tabla del ' + i + '</h3>');
+            for(var j = 0; j <= 10; j ++){
+                multi = j * i;
+                document.write('<h3>'+ i +  ' x ' + j + ' = ' + multi +'</h3>');
+            }
+        }
+	</script>
+</body>
+</html>

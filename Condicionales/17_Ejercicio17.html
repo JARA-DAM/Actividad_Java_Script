@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--Escribe un programa que pida un número entero entre uno y doce e imprima 
+		el número de días que tiene el mes correspondiente. 
+		Si introducimos otro número, nos da un error.
+	-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h2>MESES DEL AÑO.</h2>');
+        var numMes = 0;
+        var comprobar;
+        
+        do{
+            numMes = parseInt(prompt('Ingrese el numero del mes a buscar (entre 1 y 12)'));
+            switch (numMes) {
+            case 1:
+                document.write('<h3>El mes correspondiente al mes 1 es "Enero"' + '</h3>');
+                break;
+            case 2:
+                document.write('<h3>El mes correspondiente al mes 2 es "Febrero"' + '</h3>');
+                break;
+            case 3:
+                document.write('<h3>El mes correspondiente al mes 3 es "Marzo"' + '</h3>');
+                break;
+            case 4:
+                document.write('<h3>El mes correspondiente al mes 4 es "Abril"' + '</h3>');
+                break;
+            case 5:
+                document.write('<h3>El mes correspondiente al mes 5 es "Mayo"' + '</h3>');
+                break;
+            case 6:
+                document.write('<h3>El mes correspondiente al mes 6 es "Junio"' + '</h3>');
+                break;
+            case 7:
+                document.write('<h3>El mes correspondiente al mes 7 es "Julio"' + '</h3>');
+                break;
+            case 8:
+                document.write('<h3>El mes correspondiente al mes 8 es "Agosto"' + '</h3>');
+                break;
+            case 9:
+                document.write('<h3>El mes correspondiente al mes 9 es "Septiembre"' + '</h3>');
+                break;
+            case 10:
+                document.write('<h3>El mes correspondiente al mes 10 es "Octubre"' + '</h3>');
+                break;
+            case 11:
+                document.write('<h3>El mes correspondiente al mes 11 es "Noviembre"' + '</h3>');
+                break;
+            case 12:
+                document.write('<h3>El mes correspondiente al mes 12 es "Diciembre"' + '</h3>');
+                break;                    
+            default:
+                document.write('<h2>ERROR: Número incorrecto</h2>');
+                break;
+            }
+            comprobar = prompt('¿Desea comprobar otro lado? (si/no)').toLowerCase();  
+        }while(comprobar == 'si');
+       
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--  Dise񡲠un algoritmo que nos diga el dinero que tenemos 
+		(en euros y centimos) despues de pedirnos cuantas monedas 
+		tenemos de 2e, 1e, 50 centimos, 20 centimos o 10 centimos).
+	-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+       
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h3>DESGLOSAR EL DINERO OBTENIDO EN EUROS Y CENTIMOS</h2>');
+        
+        var dosEuros = parseInt(prompt('Introduzca la cantidad de monedas de 2€'));
+        document.write('<h3>Monedas de 2 €: ' + dosEuros + ' modenas' + '</h3>');
+
+		var unEuro = parseInt(prompt('Introduzca la cantidad de monedas de 1€'));
+        document.write('<h3>Monedas de 1 €: ' + unEuro + ' modenas' + '</h3>');
+		
+		var cincuentaCent = parseInt(prompt('Introduzca la cantidad de monedas de 0,50€'));
+        document.write('<h3>Monedas de 0,50 €: ' + cincuentaCent + ' modenas' + '</h3>');
+
+		var veinteCent = parseInt(prompt('Introduzca la cantidad de monedas de 0,20€'));
+        document.write('<h3>Monedas de 0,20 €: ' + veinteCent + ' modenas' + '</h3>');
+
+		var diezCent = parseInt(prompt('Introduzca la cantidad de monedas de 0,10€'));
+        document.write('<h3>Monedas de 0,10 €: ' + diezCent + ' modenas' + '</h3>');
+
+		var euros = ((dosEuros * 2) + unEuro);
+		var euros2 = ((cincuentaCent * 50) + (veinteCent * 20) + (diezCent * 10)) / 100;
+		var centimos = ((cincuentaCent * 50) + (veinteCent * 20) + (diezCent * 10)) % 100;
+
+		var totalEuros = (euros + euros2) - centimos/100;
+        document.write('<h2>El dinero total es: ' + totalEuros.toFixed(0) + '€ con ' 
+			+ centimos + ' céntimos' + '</h2>');
+        
+	</script>
+</body>
+</html>

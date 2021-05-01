@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--Realiza un programa que pida por teclado el resultado (dato entero) obtenido 
+        al lanzar un dado de seis caras y muestre por pantalla el número en letras 
+        (dato cadena) de la cara opuesta al resultado obtenido.
+        * Nota 1: En las caras opuestas de un dado de seis caras están los números: 
+        1-6, 2-5 y 3-4.
+        * Nota 2: Si el número del dado introducido es menor que 1 o mayor que 6, 
+        se mostrará el mensaje: "ERROR: número incorrecto.
+	-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h2>CARA OPUESTA DE UN DADO.</h2>');
+        var numDado = 0;
+        var comprobar;
+        
+        do{
+            numDado = parseInt(prompt('Ingrese el numero de la cara del dado (entre 1 y 6)'));
+
+            if(numDado >= 1 && numDado <= 6){
+                switch (numDado) {
+                case 1:
+                    document.write('<h3>La cara opuesta de ' + numDado +' es "SEIS"' + '</h3>');
+                    break;
+                case 2:
+                    document.write('<h3>La cara opuesta de ' + numDado + ' es "CINCO"' + '</h3>');                    
+                    break;
+                case 3:
+                    document.write('<h3>La cara opuesta de ' + numDado + ' es "CUATRO"' + '</h3>');                    
+                    break;
+                case 4:
+                    document.write('<h3>La cara opuesta de ' + numDado + ' es "TRES"'+ '</h3>');                    
+                    break;
+                case 5:
+                    document.write('<h3>La cara opuesta de ' + numDado + ' es "DOS"'+ '</h3>');                    
+                    break;
+                case 6:
+                    document.write('<h3>La cara opuesta de ' + numDado + ' es "UNO"'+ '</h3>');                    
+                    break;
+                default:
+                    break;
+                }
+            }else{
+                document.write('<h2>ERROR: Número incorrecto</h2>');
+            }
+            comprobar = prompt('¿Desea comprobar otro lado?').toLowerCase();  
+        }while(comprobar == 'si');
+       
+	</script>
+</body>
+</html>

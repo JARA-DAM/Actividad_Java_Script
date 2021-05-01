@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 15</title>
+
+	<!--La asociación de vinicultores tiene como política fijar un precio inicial 
+        al kilo de uva, la cual se clasifica en tipos A y B,  y además en tamaños 1 y 2. 
+        Cuando se realiza la venta del producto, ésta es de un solo tipo y tamaño, 
+        se requiere determinar cuánto recibirá un productor por la uva que entrega en un 
+        embarque, considerando lo siguiente: 
+        si es de tipo A, se le cargan 20 céntimos al precio inicial cuando es 
+        de tamaño 1; y 30 céntimos si es de tamaño 2. 
+        Si es de tipo B, se rebajan 30 céntimos cuando es de tamaño 1, y 50 céntimos 
+        cuando es de tamaño 2.
+	-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	<script type="text/javascript">
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h2>GANANCIAS QUE RECIBIRÁ UN PRODUCTOR DE UVA POR LA VENTA.</h2>');
+        const PRECIO_UVA = 0.80;
+	    const PRECIO_TIPO_A_TAMAÑO_1 = 0.20;
+	    const PRECIO_TIPO_A_TAMAÑO_2 = 0.30;
+	    const PRECIO_TIPO_B_TAMAÑO_1 = (-0.30);
+	    const PRECIO_TIPO_B_TAMAÑO_2 = (-0.50);
+        
+        var precioFinal;
+        var masUva = "NO";
+        do{
+            precioFinal = 0;
+            uvaKg = parseInt(prompt('Introduzca la cantidad de uva (Kg)'));
+            tipoUva = prompt('La uva es Tinta o Blanca? (Escriba tinta o blanca)').toUpperCase();
+            tamanoUva = prompt('La uva es grande o pequeña? (Escriba "grande" o "pequeña" ').toUpperCase();
+
+            if (tipoUva == 'TINTA' && tamanoUva == 'PEQUEÑA') {
+				precioFinal = uvaKg * (PRECIO_UVA + PRECIO_TIPO_A_TAMAÑO_1);
+			} else if (tipoUva == 'TINTA' && tamanoUva == 'GRANDE') {
+				precioFinal = uvaKg * (PRECIO_UVA + PRECIO_TIPO_A_TAMAÑO_2);
+			} else if (tipoUva == 'BLANCA' && tamanoUva == 'PEQUEÑA') {
+				precioFinal = uvaKg * (PRECIO_UVA + PRECIO_TIPO_B_TAMAÑO_1);
+			} else if (tipoUva == 'BLANCA' && tamanoUva == 'GRANDE') {
+				precioFinal = uvaKg * (PRECIO_UVA + PRECIO_TIPO_B_TAMAÑO_2);			
+			} 
+			if (precioFinal == 0){
+                console.log(precioFinal);
+                document.write('<h3>No ha igresado los datos correctamente.' + '</h3>');
+			} else {
+                document.write('<h3>El precio para los ' + uvaKg + ' Kg de uva ' + tipoUva + ', ' 
+                    + tamanoUva + ' es de ' + precioFinal + '</h3>');
+			}
+			masUva = prompt('¿Desea realizar otro cálculo de precio? (SI/NO)');
+        }while(masUva == "SI");
+
+	</script>
+</body>
+</html>

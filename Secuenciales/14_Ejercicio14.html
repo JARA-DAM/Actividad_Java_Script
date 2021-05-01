@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 13</title>
+
+	<!-- Pedir el nombre y los dos apellidos de una persona y mostrar las iniciales.-->
+</head>
+<body>
+	<h1>Bienvenido Usuario!</h1>
+	
+    <script type="text/javascript">
+        
+        alert('Bienvenido a mi programa!!!');
+        document.write('<h3>PROGRAMA QUE MUESTRA LAS INICIALES DE UN NOMBRE Y DOS APELLIDOS</h2>');
+        
+        var nombre = prompt('Introduzca el nombre: ');
+        document.write('<h3>Nombre: '+nombre+'</h2>');
+
+		var apellido1 = prompt('Introduzca el primer apellido: ');
+        document.write('<h3>Primer Apellido: '+apellido1+'</h2>');
+
+        var apellido2 = prompt('Introduzca el segundo apellido: ');
+        document.write('<h3>Segundo Apellido: '+apellido2+'</h2>');
+
+        document.write("Las iniciales del nombre son: " + nombre.charAt(0) + ". " 
+        + apellido1.charAt(0) + ". " + apellido2.charAt(0) + ".");
+		
+	</script>
+</body>
+</html>
