@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ejercicio 12</title>
+</head>
+
+<body>
+<script type="text/javascript">
+
+var dia =  29
+var mes = 2
+var ano = 2016
+
+if(dia>31 || dia<1 || mes>12 || mes<1)
+    console.log("Es una fecha incorrecta")
+else if(mes == 2){
+    if((ano%4==0 && ano%100!=0)^(ano%400==0) && dia>29)
+        console.log("Es una fecha incorrecta")
+    else if(!(ano%4==0 && ano%100!=0)^(ano%400==0) && dia>28)
+        console.log("Es una fecha incorrecta")
+    else
+        console.log("Es una fecha correcta")
+}
+else if((mes%2==0 && mes<=6 && dia>30) || (mes%2==0 && mes>6 && dia>30))
+    console.log("Es una fecha incorrecta")
+else
+    console.log("Es una fecha correcta")
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ejercicio 9</title>
+</head>
+
+<body>
+<script type="text/javascript">
+
+var x1 = 3
+var y1 = 4
+var r1 = 8.2
+
+var x2 = 5
+var y2 = 6
+var r2 = 5.3
+
+if(Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))>(r2+r1)){
+    console.log("Son circunferencias exteriores.")
+}
+else if(Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))==(r2+r1))
+    console.log("Son circunferencias tangentes exteriores")
+else if(Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))==Math.abs(r2-r1))
+    console.log("Son circunferencias tangentes interiores")
+else if(Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))>Math.abs(r2-r1))
+    console.log("Son circunferencias secantes")
+else if(Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2))<Math.abs(r2-r1))
+    console.log("Son circunferencias interiores")
+else{
+    console.log("Son circunferencias concentricas")
+}
+
+</script>
+</body>
+</html>
