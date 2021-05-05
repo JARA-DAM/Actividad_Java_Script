@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmos 3 Bucles - Ejercicio 1</title>
+</head>
+
+<body>
+    <p>Crea una aplicación que pida un número y calcule su factorial
+        (El factorial de un número es el producto de todos los enteros entre 1 y el propio número
+        y se representa por el número seguido de un signo de exclamación.
+        Por ejemplo 5! = 1x2x3x4x5=120)</p>
+
+    <script type="text/javascript">
+        var num = prompt("Introduce un numero: ");
+        var numFactorial=1;
+
+        for (var i = 1; i <=num; i++) {
+
+            numFactorial=numFactorial*i;
+            console.log("El numero factorial es : " + numFactorial)
+           
+        }
+
+        console.log("El numero factorial es : " + numFactorial)
+        document.write('<p>'+ num+'!'+ ' = '+ numFactorial+'</p>');
+    </script>
+</body>
+
+</html>

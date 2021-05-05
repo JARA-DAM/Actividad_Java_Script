@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmos 2 Condicionales - Ejercicio 1</title>
+</head>
+
+<body>
+    <p>Tenemos que pedir dos números por teclado,compararlos e indicar si el primero es mayor que el segundo o no.</p>
+
+    <script type="text/javascript">
+        var num1 = 0;
+        var num2 = 0;
+
+        num1 = prompt("Introduce un numero: ");
+
+        num2 = prompt("Introduce un segundo numero: ");
+
+        // comprobar si es mayor num1 que num2 
+
+        if (num1 >num2) {
+            console.log("El primer numero introducido es mayor que el segundo");
+            document.write('<p>El primer numero introducido es mayor que el segundo </p>');
+
+
+
+        } else if (num1 == num2){
+            console.log("los numero introducido son iguales");
+            document.write('<p>los  numero introducido son iguales </p>');
+            
+        }else{
+       
+            console.log("El segundo numero introducido es mayor que el primero");
+            document.write('<p>El segundo numero introducido es mayor que el primero </p>');
+
+        }
+    </script>
+</body>
+
+</html>

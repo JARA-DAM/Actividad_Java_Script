@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmos 3 Bucles - Ejercicio 2</title>
+</head>
+
+<body>
+    <p>Algoritmo que pida números hasta que se introduzca un cero.
+        Debe imprimir la suma y la media de todos los números introducidos.)</p>
+
+    <script type="text/javascript">
+
+        var num =0;
+        var suma =0;
+        var media;
+        var contador=0;
+        
+        do {
+            
+        num = prompt("Introduce un numero: ");
+        // como pasar un string a entero, lo parseamos con lo que toque 
+        suma= suma+ parseInt(num);
+        
+        console.log("la suma de mis numeros es  : " + suma)
+        
+        contador++;
+        console.log("el contador es : "+ contador)
+
+        } while (num!=0);
+
+        media= suma/contador;
+
+
+        console.log("la suma de mis numeros es  : " + suma)
+        document.write('<p> la suma de mis numeros es '  + suma + '</p>');
+
+        
+        console.log("la media de mis numeros es  : " + media)
+        document.write('<p> la media de mis numeros es '  + media + '</p>');
+
+
+    </script>
+</body>
+
+</html>

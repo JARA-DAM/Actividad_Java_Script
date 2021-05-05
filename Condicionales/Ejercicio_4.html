@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmos 2 Condicionales - Ejercicio 4</title>
+</head>
+
+<body>
+    <p>4.Pedimos por teclado nombre y contraseña
+        si coinciden con las correctas indicamos que se ha entrado en el sistema.
+        En caso contrario indicamos que el nombre o la clave son incorrectas</p>
+
+    <script type="text/javascript">
+        var nombre = prompt("Introduce tu nombre: ");
+        var contrasena = prompt("Introduce tu contraseña: ");
+        var nombreSistema = "RAFAELA";
+        var nombreContrasena = "1234hola";
+
+
+        if (nombre == nombreSistema) {
+            console.log("El  nombre introducido es correcto");
+            document.write('<p>"El  nombre introducido es correcto"</p>');
+
+            if (contrasena == nombreContrasena) {
+                console.log("La  contraseña introducido es correcto");
+                document.write('<p>"La contraseña introducido es correcto"</p>');
+
+                console.log("Datos introducidos correctamente");
+                document.write('<h5> Los Datos introducidos son correctos estas dentro del sistema</h5>');
+
+            } else {
+                console.log("La  contraseña introducido no es correcta");
+                document.write('<p>La  contraseña introducido no es correcta </p>');
+
+            }
+
+        } else {
+            console.log("El  nombre introducido no es correcto");
+            document.write('<p>El  nombre introducido no es correcto </p>');
+
+        }
+    </script>
+</body>
+
+</html>
