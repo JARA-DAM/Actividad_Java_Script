@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 3 Bucles</title>
+
+	<!-- EJ 3. Crea una aplicación que permita adivinar un número. La aplicación genera un 
+     número aleatorio del 1 al 20. A continuación va pidiendo números y va 
+     respondiendo si el número a adivinar es mayor o menor que el introducido,
+     a demás de los intentos que te quedan (tienes 5 intentos para acertarlo). 
+     El programa termina cuando se acierta el número (además te dice en cuantos 
+    intentos lo has acertado), si se llega al limite de intentos te muestra el 
+    número que había generado.-->
+
+</head>
+<body>
+	<h2>Adivina el número que estoy pensando</h2>
+	
+    <script type="text/javascript">
+
+        var aleatorio = Math.floor((Math.random() * (20 - 1 + 1)) + 1);
+        var contador = 5;
+        var numero;
+
+        do {
+			numero = parseInt(prompt("Adivina el número (del 1 al 20). Intentos restantes: " + contador));
+			
+			contador--;
+			
+			if (numero == aleatorio) {
+				alert("¡Enhorabuena, has acertado!");
+			} else {
+				alert("No es correcto \nTe quedan " + contador + " intentos.");
+			}	
+			
+		} while (numero != aleatorio && contador > 0);
+		
+		if (contador == 0) {
+			document.write("\nEl número era " + aleatorio);
+		}
+	</script>
+</body>
+</html>

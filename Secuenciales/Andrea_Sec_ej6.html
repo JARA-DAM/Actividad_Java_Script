@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 6 Secuenciales</title>
+
+	<!-- Ej6. Realiza un programa que reciba una cantidad de minutos y muestre por pantalla a 
+        cuántas horas y minutos corresponde.-->
+</head>
+<body>
+	<h2>Calcular las horas y minutos</h2>
+	
+    <script type="text/javascript">
+        var minutos = parseInt(prompt('Indroduce un número de minutos'));
+        document.write('<br>Minutos = ' + minutos);
+				
+		var horas = minutos / 60;
+        var restoMin = minutos % 60;
+        document.write('<h3>El resultado es: ' + horas + ' horas y ' + restoMin + ' minutos</h3>');
+
+	</script>
+</body>
+</html>

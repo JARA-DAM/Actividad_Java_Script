@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 5 Condicionales</title>
+
+	<!-- Ej 5 Pedimos por teclado una cadena y hay que comprobar que todas las letras sean mayúsculas.-->
+</head>
+<body>
+	<h2>Comprobador de mayúsculas</h2>
+	
+    <script type="text/javascript">
+        var cadena = prompt('Introduce una cadena de caracteres:');
+        document.write('<br>Cadena introducida: "' + cadena + '"');
+
+		if (cadena == cadena.toUpperCase()) {
+			document.write('<br>Todas las letras de la cadena son mayúsculas.');
+		} else if (cadena == cadena.toLowerCase()) {
+			document.write('<br>Todas las letras de la cadena son minúsculas.');
+		} else {
+			document.write('<br>La cadena contiene mayúsculas y minúsculas.');
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 6 Condicionales</title>
+
+	<!-- Ej 6. Pedimos por teclado dos números: base y exponente
+     Tenemos que comprobar el exponente: si es 0 la potencia es 1, 
+     si es menor que 0 la potencia es 1/potencia (con el exponente positivo) 
+     y si es mayor que 0 se calcula la potencia.-->
+</head>
+<body>
+	<h2>Calcular una potencia</h2>
+	
+    <script type="text/javascript">
+        var base = parseInt(prompt('Introduce un número entero como base:'));
+        document.write('<br>Base: ' + base);
+
+        var exponente = parseInt(prompt('Introduce un número entero como exponente:'));
+        document.write('<br>Exponente: ' + exponente);
+
+        var resultado;
+
+		if (exponente == 0) {
+            resultado = 1;
+        } /* este else if no tiene sentido porque el operador ** ya tiene en cuenta el exponente negativo
+            else if (exponente < 0) {
+            resultado = 1 / base ** exponente;
+        } */ else {
+            resultado = base ** exponente;
+        }
+
+        document.write('<h3>' + base + ' elevado a ' + exponente + ' = ' + resultado + '</h3>');
+	</script>
+</body>
+</html>

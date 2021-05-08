@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 18 Condicionales</title>
+
+	<!-- Ej 18. Una compañía de transporte internacional tiene servicio en algunos países de 
+     América del Norte, América Central, América del Sur, Europa y Asia.
+     El costo por el servicio de transporte se basa en el peso del paquete 
+     y la zona a la que va dirigido...-->
+
+</head>
+<body>
+	<h2>Calcula el coste del transporte</h2>
+	
+    <script type="text/javascript">
+        const PRECIO_AN = 10;
+        document.write("<br>Precio para América del Norte: " + PRECIO_AN);
+        const PRECIO_AC = 12;
+        document.write("<br>Precio para América Central: " + PRECIO_AC);
+        const PRECIO_AS = 15;
+        document.write("<br>Precio para América del Sur: " + PRECIO_AS);
+        const PRECIO_EU = 8;
+        document.write("<br>Precio para Europa: " + PRECIO_EU);
+        const PRECIO_ASIA = 5;
+        document.write("<br>Precio para Asia: " + PRECIO_ASIA);
+        const PRECIO_KG = 6.75;
+        document.write("<br>Recargo por kg: " + PRECIO_KG);
+
+        var pais = prompt("¿A dónde quiere mandar el paquete?: \n-America del Norte: AN \n-América Central: AC \n-América del Sur: AS \n-Europa: EU \n-Asia: ASIA").toUpperCase();
+		document.write("<br>País de destino: " + pais);
+
+		var peso = parseInt(prompt("Introduzca el peso del paquete en Kg"));
+		document.write("<br>Peso del paquete: " + peso);
+
+		var precio = peso * PRECIO_KG;
+		
+		if (pais == "AN") {
+			precio += PRECIO_AN;
+		} else if (pais == "AC") {
+			precio += PRECIO_AC;
+		} else if (pais == "AS") {
+			precio += PRECIO_AS;
+		} else if (pais == "EU") {
+			precio += PRECIO_EU;
+		} else if (pais == "ASIA") {
+			precio += PRECIO_ASIA;
+		} else {
+            alert("El código de país introducido no es válido");
+        }
+		
+		document.write("<h3>El envío de su paquete tiene un coste de " + precio + " euros.");
+	</script>
+</body>
+</html>

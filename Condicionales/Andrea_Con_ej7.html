@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 7 Condicionales</title>
+
+	<!-- Ej 7. Algoritmo que pida dos números 'nota' y 'edad' y un carácter 
+    'sexo' muestre el mensaje 'ACEPTADA' si la nota es mayor o igual a cinco, 
+    la edad es mayor o igual a dieciocho y el sexo es 'F'. 
+    En caso de que se cumpla lo mismo, pero el sexo sea 'M', debe imprimir 'POSIBLE'. 
+    Si no se cumplen dichas condiciones se debe mostrar 'NO ACEPTADA'.-->
+</head>
+<body>
+	<h2>Mira si has sido aceptada...</h2>
+	
+    <script type="text/javascript">
+        var nota = parseInt(prompt('Introduce tu nota:'));
+        document.write('<br>Nota: ' + nota);
+
+        var edad = parseInt(prompt('Introduce tu edad:'));
+        document.write('<br>Edad: ' + edad);
+
+        var sexo = prompt('Introduce tu sexo (M / F):');
+        document.write('<br>Sexo: ' + sexo);
+
+        var resultado;
+
+		if (nota >= 5 && edad >= 18 && (sexo == 'F' || sexo == 'f')) {
+            resultado = 'ACEPTADA';
+        } else if (nota >= 5 && edad >= 18 && (sexo == 'M' || sexo == 'm')) {
+            resultado = 'POSIBLE';
+        } else {
+            resultado = 'NO ACEPTADA';
+        }
+
+        document.write('<h3> Resolución: ' + resultado + '</h3>');
+	</script>
+</body>
+</html>

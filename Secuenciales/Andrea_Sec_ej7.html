@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 7 Secuenciales</title>
+
+	<!-- Ej7. Un vendedor recibe un sueldo base mas un 10% extra por comision de sus ventas, 
+	el vendedor desea saber cuanto dinero obtendrÃ¡ por concepto de comisiones por 
+	las tres ventas que realiza en el mes y el total que recibirÃ¡ en el mes tomando 
+	en cuenta su sueldo base y comisiones.-->
+</head>
+<body>
+	<h2>Cálculo de retribución</h2>
+	
+    <script type="text/javascript">
+        var sueldoBase = parseInt(prompt('¿Cual es tu sueldo base?'));
+        document.write('<br>Sueldo base = ' + sueldoBase);
+
+		var venta1 = parseInt(prompt('Indroduce el dinero de la primera venta:'));
+        document.write('<br>Primera venta: ' + venta1 + ' euros');
+
+        var venta2 = parseInt(prompt('Indroduce el dinero de la segunda venta:'));
+        document.write('<br>Segunda venta: ' + venta2 + ' euros');
+
+        var venta3 = parseInt(prompt('Indroduce el dinero de la tercera venta:'));
+        document.write('<br>Tercera venta: ' + venta3 + ' euros');
+				
+		var comision = (venta1 * 10 / 100) + (venta2 * 10 /100) + (venta3 * 10 / 100);
+        document.write('<h3>El total de comisiones es: ' + comision + '</h3>');
+
+        var totalSalario = comision + sueldoBase;
+        document.write('<h3>El total de tu salario es: ' + totalSalario + ' euros</h3>')
+
+	</script>
+</body>
+</html>

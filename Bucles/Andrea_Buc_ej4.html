@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 4 Bucles</title>
+
+	<!-- EJ 4. Realizar un algoritmo que pida números (se pedirá por teclado la cantidad de 
+    números a introducir). El programa debe informar de cuantos números introducidos 
+    son mayores que 0, menores que 0 e iguales a 0.-->
+
+</head>
+<body>
+	<h2>Análisis de números</h2>
+	
+    <script type="text/javascript">
+
+        var cantidad = parseInt(prompt("¿Cuántos números vas a introducir?"));
+        var ceros = 0;
+        var positivos = 0;
+        var negativos = 0;
+        var numero;
+
+        for (var i = 0; i < cantidad; i++) {
+			numero = parseInt(prompt("Introduce un número:"));
+			
+			if (numero == 0) {
+				ceros++;
+			} else if (numero > 0) {
+				positivos++;
+			} else {
+				negativos++;
+			}
+		}
+
+        document.write("<br>Cantidad de ceros introducidos: " + ceros);
+        document.write("<br>Cantidad de positivos introducidos: " + positivos);
+        document.write("<br>Cantidad de negativos introducidos: " + negativos);
+
+	</script>
+</body>
+</html>
